@@ -4,7 +4,7 @@ import json
 from app import app, db
 
 
-class SignupTest(unittest.TestCase):
+class MagnetoApiTest(unittest.TestCase):
 
     WRONG_SEQUENCE = [
         "000000",
