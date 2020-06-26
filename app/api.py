@@ -26,8 +26,7 @@ def add_sequence():
             return Response("DNA sequence should be NxN format", status=400)
 
     dna = DNA(sequence=sequence)
-    db.session.add(dna)
-    db.session.commit()
+    dna.save()
 
     return Response(status=200 if dna.is_mutant else 403)
 

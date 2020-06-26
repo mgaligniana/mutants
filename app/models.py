@@ -21,6 +21,10 @@ class DNA(db.Model):
     def serialize(self):
         return {"id": self.id, "sequence": self.sequence, "is_mutant": self.is_mutant}
 
+    def save(self):
+        db.session.add(self)
+        db.session.commit()
+
     def has_mutant_sequence(self, sequence):
         return (
             self._check_rows(sequence)
