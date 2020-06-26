@@ -1,4 +1,6 @@
-# mutants
+# RESTful API to detect mutants
+
+There were completed the levels: 1, 2 and 3 (except the 'aggressive traffic' part) defined in the [challenge file](https://github.com/mgaligniana/mutants/blob/master/CHALLENGE.pdf)
 
 ## Stack used
 * Flask
