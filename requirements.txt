@@ -3,3 +3,4 @@ Flask-Migrate
 Flask-Script
 Flask-SQLAlchemy
 numpy
+psycopg2-binary

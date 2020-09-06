@@ -9,26 +9,13 @@ Here is the implementation for levels: 1, 2 and 3 (except the 'aggressive traffi
 ## Run project
 
 ```
-pip install -r requirements.txt
-```
-
-```
-export FLASK_APP=app
-export FLASK_ENV=development
-export APP_SETTINGS="config.DevelopmentConfig"
-export DATABASE_URL="postgresql:///mutants"
-```
-
-```
-python manage.py upgrade
-```
-
-```
-flask run
+docker-compose build
+docker-compose up
+docker-compose run web python manage.py db upgrade
 ```
 
 ## Run tests
 
 ```
-python -m unittest tests/test_api.py
+docker-compose run web python -m unittest tests/test_api.py
 ```
